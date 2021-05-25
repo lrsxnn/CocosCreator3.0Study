@@ -1,0 +1,24 @@
+// Effect Syntax Guide: https://github.com/cocos-creator/docs-3d/blob/master/zh/material-system/effect-syntax.md
+
+CCEffect %{
+  techniques:
+  - name: opaque
+    passes:
+    - vert: general-vs:vert # builtin header
+      frag: unlit-fs:frag
+}%
+
+CCProgram unlit-fs %{
+  precision highp float;
+  #include <output>
+  #include <cc-fog-fs>
+
+  in vec3 v_position;
+  in vec4 v_color;
+
+  vec4 frag () {
+    vec4 o = v_color;
+    o.rgb = v_position.xyz * 0.5 + 0.5;
+    return CCFragOutput(o);
+  }
+}%

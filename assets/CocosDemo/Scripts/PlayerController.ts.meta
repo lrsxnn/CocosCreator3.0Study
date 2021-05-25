@@ -1,0 +1,14 @@
+{
+  "ver": "4.0.22",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "752f8927-0734-462b-adf9-500f1ae0864b",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "importAsPlugin": false,
+    "moduleId": "project:///assets/Scripts/PlayerController.js",
+    "importerSettings": 7,
+    "simulateGlobals": []
+  }
+}
